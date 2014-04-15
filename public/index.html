@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redis Samples</title>
+</head>
+<body>
+  <textarea id="text" cols="100" rows="30"></textarea><br>
+  <input id="msg" type="text" style="width:500px;">
+  <button id="send">Send</button>
+
+  <script src="/lib/socket.io-client/dist/socket.io.js"></script>
+  <script src="/lib/jquery/dist/jquery.js"></script>
+  <script src="/lib/lodash/dist/lodash.js"></script>
+  <script>
+    var socket = io.connect('/');
+
+    socket.on('news', function (data) {
+      console.log('News:', data.news);
+    });
+
+    socket.on('msg', function (data) {
+      $('#text').val($('#text').val() + 'message: ' + data.msg + '\n');
+    });
+
+    $('#send').on('click', function() {
+      socket.emit('msg', { msg: $('#msg').val() });
+      $('#msg').val('');
+    });
+  </script>
+</body>
+</html>

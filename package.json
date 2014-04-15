@@ -1,0 +1,15 @@
+{
+  "name": "redis-samples",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "Daniel Ku <kjunine@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.0.0",
+    "hiredis": "^0.1.16",
+    "lodash": "^2.4.1",
+    "redis": "^0.10.1",
+    "socket.io": "^0.9.16"
+  }
+}

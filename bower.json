@@ -1,0 +1,13 @@
+{
+  "name": "redis-samples",
+  "version": "0.0.0",
+  "authors": [
+    "Daniel Ku <kjunine@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "socket.io-client": "~0.9.16",
+    "jquery": "~2.1.0",
+    "lodash": "~2.4.1"
+  }
+}
